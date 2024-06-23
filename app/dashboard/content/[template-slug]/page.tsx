@@ -10,12 +10,13 @@ import Link from 'next/link'
 import { chatSession } from '@/utils/AiModal'
 import { db } from '@/utils/db'
 import { AIOutput } from '@/utils/schema'
-import { useUser } from '@clerk/clerk-react'
+
 import moment from 'moment'
 import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
 import { useRouter } from 'next/navigation'
 import { UserSubscriptionContext } from '@/app/(context)/UserSubscriptionContext'
 import { UpdateCreditUsageContext } from '@/app/(context)/UpdateCreditUsageContext'
+import { useUser } from '@clerk/nextjs'
 
 interface PROPS{
     params:{
