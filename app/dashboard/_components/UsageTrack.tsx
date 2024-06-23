@@ -30,15 +30,14 @@ import { UpdateCreditUsageContext } from '@/app/(context)/UpdateCreditUsageConte
 
     const GetData=async()=>{
          {/* @ts-ignore */}
-        const result:HISTORY[]=await db.select().from(AIOutput)
-        .where(eq(AIOutput.createdBy,user?.primaryEmailAddress?.emailAddress));
+        const result:HISTORY[]=await db.select().from(AIOutput).where(eq(AIOutput.createdBy,user?.primaryEmailAddress?.emailAddress));
         
         GetTotalUsage(result)
     }
 
     const IsUserSubscribe=async()=>{
-        const result=await db.select().from(UserSubscription)
-        .where(eq(UserSubscription.email,user?.primaryEmailAddress?.emailAddress));
+         {/* @ts-ignore */}
+        const result=await db.select().from(UserSubscription).where(eq(UserSubscription.email,user?.primaryEmailAddress?.emailAddress));
         console.log(result)
         if(result.length>0)
             {
