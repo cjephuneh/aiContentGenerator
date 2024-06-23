@@ -23,8 +23,7 @@ async function History() {
     const user=await currentUser();
 
     {/* @ts-ignore */}
-    const HistoryList:HISTORY[]=await db.select().from(AIOutput)
-    .where(eq(AIOutput?.createdBy,user?.primaryEmailAddress?.emailAddress))
+    const HistoryList:HISTORY[]=await db.select().from(AIOutput).where(eq(AIOutput?.createdBy,user?.primaryEmailAddress?.emailAddress))
     .orderBy(desc(AIOutput.id))
     ;
 
