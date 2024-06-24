@@ -66,7 +66,7 @@ import { UpdateCreditUsageContext } from '@/app/(context)/UpdateCreditUsageConte
             <div className='h-2 bg-[#9981f9] w-full rounded-full mt-3'>
                 <div className='h-2 bg-white rounded-full'
                 style={{
-                    width:(totalUsage/maxWords)*100+"%"
+                    width:totalUsage/maxWords>1?100+"%":(totalUsage/maxWords)*100+"%"
                 }}
                 ></div>
             </div>
