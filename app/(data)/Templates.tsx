@@ -210,6 +210,24 @@ export default  [
         ]
     },
     {
+        name: 'Instagram Post/Reel Idea',
+        desc: 'An AI tool that generate New and trending instagram idea depends on your niche',
+        icon: 'https://cdn-icons-png.flaticon.com/128/1029/1029183.png',
+        category: 'instagram',
+       
+        slug: 'instagram-post-idea-generator',
+        aiPrompt: 'Generate 5-10 Instagram idea depends on niche with latest trend and give output in  in rich text editor format',
+        form: [
+            {
+                label: 'Enter Keywords / Niche for your instagram idea',
+                field: 'input',
+                name: 'keywords',
+                required:true
+            },
+           
+        ]
+    },
+    {
         name: 'English Grammer Check',
         desc: 'AI Model to Correct your english grammer by providing the text',
         icon:'https://cdn-icons-png.flaticon.com/128/12596/12596700.png',
@@ -258,6 +276,72 @@ export default  [
                 label: 'Enter code which you want to understand',
                 field: 'textarea',
                 name: 'codeDesscripton',
+                required:true
+            },
+           
+        ]
+    },
+    {
+        name: 'Code Bug Detector',
+        desc: 'This tool analyzes your input, like error messages and code snippets, to pinpoint and fix bugs, offering detailed solutions and alternatives in a straightforward, user-friendly way.',
+        icon:'https://cdn-icons-png.flaticon.com/128/4426/4426267.png',
+        category: 'code-bug-detector',
+       
+        slug: 'code-bug-detector',
+        aiPrompt: 'Depends on user codeInput find bug in code and give solution and give output in  in rich text editor format in code block ',
+        form: [
+            {
+                label: 'Enter code which you want to test bug',
+                field: 'textarea',
+                name: 'codeInput',
+                required:true
+            },
+           
+        ]
+    },
+    {
+        name: 'Tagline Generator',
+        desc: 'Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.',
+        icon:'https://cdn-icons-png.flaticon.com/128/2178/2178616.png',
+        category: 'Marketting',
+       
+        slug: 'tagline-generator',
+        aiPrompt: 'Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output  in rich text editor format ',
+        form: [
+            {
+                label: 'Product/Brand Name',
+                field: 'input',
+                name: 'productName',
+                required:true
+            },
+            {
+                label: 'What you are selling / Marketting',
+                field: 'textarea',
+                name: 'outline',
+                required:true
+            },
+           
+        ]
+    },
+    {
+        name: 'Product Description',
+        desc: 'This is your AI-powered SEO expert, creating captivating and keyword-rich e-commerce product descriptions to boost your online sales.',
+        icon:'https://cdn-icons-png.flaticon.com/128/679/679922.png',
+        category: 'Marketting',
+       
+        slug: 'product-description',
+        aiPrompt: 'Depends on user productName and description generate small description for product for e-commer business give output  in rich text editor format  ',
+        form: [
+            {
+                label: 'Product Name',
+                field: 'input',
+                name: 'productName',
+                required:true
+            },
+            {
+                label: 'Product Details',
+                field: 'textarea',
+                name: 'outline',
                 required:true
             },
            
