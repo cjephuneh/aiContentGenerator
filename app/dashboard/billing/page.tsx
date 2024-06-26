@@ -25,7 +25,28 @@ function billing() {
     })
   }
 
-  const OnPayment=(subId:string)=>{
+  const loadScript = (src:any) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  };
+  const OnPayment=async(subId:string)=>{
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+   );
+
+   if (!res) {
+      alert("Razropay failed to load!!");
+      return;
+  }
     const options={
       "key":process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
       "subscription_id":subId,
