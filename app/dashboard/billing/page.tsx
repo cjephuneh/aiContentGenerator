@@ -41,9 +41,16 @@ function billing() {
       }
     }
  
+    try{
     // @ts-ignore 
     const rzp=new window.Razorpay(options);
     rzp.open();
+    }
+    catch(e)
+    {
+        console.log("Try Again...");
+        setLoading(false);
+    }
   }
 
   const SaveSubcription=async(paymentId:string)=>{
