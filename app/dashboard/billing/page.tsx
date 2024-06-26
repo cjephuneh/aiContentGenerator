@@ -48,7 +48,7 @@ function billing() {
     }
     catch(e)
     {
-        console.log("Try Again...");
+        console.log("Try Again...",e);
         setLoading(false);
     }
   }
