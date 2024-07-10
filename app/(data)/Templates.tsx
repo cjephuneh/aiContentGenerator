@@ -1,5 +1,43 @@
 export default  [
     {
+        name: 'Write Email',
+        desc: 'This is your AI-powered Email writer, Help us to  write more professional email.',
+        icon:'https://cdn-icons-png.flaticon.com/128/4185/4185808.png',
+        category: 'Email',
+       
+        slug: 'email-write',
+        aiPrompt: 'Depends on topic write professional email and give output  in rich text editor format  ',
+        form: [
+            {
+                label: 'Email Topic',
+                field: 'input',
+                name: 'topic',
+                required:true
+            },
+           
+           
+        ]
+    },
+    {
+        name: 'Rewrite your email',
+        desc: 'This is your AI-powered Email rewrited, Help us to correct your email grammer and write more professional email.',
+        icon:'https://cdn-icons-png.flaticon.com/128/6125/6125875.png',
+        category: 'Email',
+       
+        slug: 'email-rewriter',
+        aiPrompt: 'Depends on email-body rewrite email and corrrect grammer and give output  in rich text editor format  ',
+        form: [
+            {
+                label: 'Your Email',
+                field: 'textarea',
+                name: 'email-body',
+                required:true
+            },
+           
+           
+        ]
+    },
+    {
         name:'Blog Title',
         desc:'An AI tool that generate blog title depends on yout blog information',
         category:'Blog',
@@ -347,6 +385,7 @@ export default  [
            
         ]
     },
+   
 
 
 
