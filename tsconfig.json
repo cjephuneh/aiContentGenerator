@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/dashboard/billing/page.tsx", "app/dashboard/billing/page.tsx", "app/api/create-subscription/route.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/dashboard/billing/page.js", "app/dashboard/billing/page.js", "app/api/create-subscription/route.js"],
   "exclude": ["node_modules"]
 }
