@@ -40,7 +40,8 @@ function SideNav() {
   return (
     <div className='h-screen relative p-5 shadow-sm border bg-white'>
         <div className='flex justify-center'>
-        <Image src={'/logo.svg'} alt='logo' width={120} height={100} />
+        {/* <Image src={'/logo.svg'} alt='logo' width={120} height={100} /> */}
+        <h1 className='text-2xl font-bold text-red-700'>Niche Nod</h1>
         </div>
         <hr className='my-6 border' />
         <div className='mt-3'>
