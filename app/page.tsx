@@ -12,7 +12,8 @@ export default function Home() {
       {/* <a className="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Brand</a> */}
       <div>
         {/* <button type="button" className="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation"> */}
-          <Image src={'/logo.svg'} alt="logo" width={150} height={150} />
+          {/* <Image src={'/logo.svg'} alt="logo" width={150} height={150} /> */}
+          <h1 className="text-xl font-semibold dark:text-white">NichNode</h1>
         {/* </button> */}
       </div>
     </div>
@@ -34,8 +35,8 @@ export default function Home() {
 
     <div className="flex justify-center">
       <a className="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-neutral-800 dark:border-neutral-700 dark:hover:border-neutral-600 dark:text-neutral-200" 
-      href="tubeguruji.com" target="_blank">
-        Join Now
+      href="https://x.com/Code4jeph" target="_blank">
+        Contact me
         <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-200 font-semibold text-sm text-gray-600 dark:bg-neutral-700 dark:text-neutral-400">
           <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </span>
