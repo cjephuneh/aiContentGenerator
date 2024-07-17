@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Head from 'next/head'; // Import the Head component
+import Script from 'next/script'; // Import the Script component
 
 const inter = Outfit({ subsets: ["latin"] });
 
@@ -17,18 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <Head>
-        {/* Add the Clarity script within the Head component */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `
-          (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "n8czxqyk7g");
-        ` }} />
-      </Head>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>{children}
+           {/* Add the Clarity script within the Head component */}
+           
+           <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "n8czxqyk7g");
+          `}
+        </Script>
+        </body>
       </html>
     </ClerkProvider>
   );
