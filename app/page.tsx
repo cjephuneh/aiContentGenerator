@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         {/* <button type="button" className="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation"> */}
           {/* <Image src={'/logo.svg'} alt="logo" width={150} height={150} /> */}
-          <h1 className="text-xl font-semibold dark:text-white">NichNode😉</h1>
+          <h1 className="text-xl font-semibold dark:text-white">NichNode</h1>
         {/* </button> */}
       </div>
     </div>
