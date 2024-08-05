@@ -15,7 +15,7 @@ function Header() {
         />
       </div>
       <div className='flex gap-5 items-center'>
-        <Link href="/contact"
+        <Link href="/dashboard/contact"
             className='bg-primary p-1 rounded-full text-sm text-white px-2'>
             Contact Me
           
