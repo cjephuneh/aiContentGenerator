@@ -1,23 +1,28 @@
-// /api/create-subscription
+import axios from 'axios';
 import { NextResponse } from 'next/server';
-import Razorpay from 'razorpay'
 
-export async function POST(req,res){
-    let instance=new Razorpay({
-        key_id:process.env.RAZORPAY_KEY_ID,
-        key_secret:process.env.RAZORPAY_SECRET_KEY
-    })
+export async function POST(req) {
+  const { currency } = await req.json(); // Accept currency from request
 
-    const result=await instance.subscriptions.create({
-        plan_id:process.env.SUBSCRIPTION_PLAN_ID,
-        customer_notify:1,
-        quantity:1,
-        total_count:1,
-        addons:[],
-        notes:{
-            key1:'Note'
-        }
-    });
+  try {
+    const response = await axios.post(
+      'https://api.paystack.co/plan',
+      {
+        name: 'Monthly Subscription',
+        interval: 'monthly',
+        amount: 500 * 100, // Amount in kobo (convert based on currency if needed)
+        currency: currency
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`,
+        },
+      }
+    );
 
-    return NextResponse.json(result);
+    return NextResponse.json(response.data);
+  } catch (error) {
+    console.error('Error creating plan:', error);
+    return NextResponse.json({ error: 'Error creating plan' });
+  }
 }
