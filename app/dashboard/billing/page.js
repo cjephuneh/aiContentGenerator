@@ -8,6 +8,7 @@ import { UserSubscription } from '@/utils/schema';
 import { useUser } from '@clerk/nextjs';
 import moment from 'moment';
 import { UserSubscriptionContext } from '@/app/(context)/UserSubscriptionContext';
+import { FaRegCheckCircle } from "react-icons/fa";
 
 function billing() {
   const [loading, setLoading] = useState(false);
@@ -98,13 +99,13 @@ function billing() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100 min-h-screen py-8">
       <script src="https://js.paystack.co/v1/inline.js"></script>
-      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <h2 className="text-center font-bold text-3xl my-3">Upgrade With Monthly Plan</h2>
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center font-bold text-3xl my-6">Upgrade With Monthly Plan</h2>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8 ">
-          <div className="rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:items-center md:gap-12">
+          <div className="rounded-md bg-white border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
             <div className="text-center">
               <h2 className="text-lg font-medium text-gray-900">
                 Free
@@ -117,70 +118,35 @@ function billing() {
               </p>
             </div>
 
-            <ul className="mt-6 space-y-2">
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+            <ul className="mt-8 p-4 space-y-4">
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> 10,000 Words/Month </span>
               </li>
 
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> 50+ Content Templates </span>
               </li>
 
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> Unlimited Download & Copy </span>
               </li>
 
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> 1 Month of History </span>
               </li>
             </ul>
+            <div className="mt-8  items-center justify-center flex ">
+              <Button type="button" className="w-1/2" disabled>
+                Free Plan
+              </Button>
+            </div>
           </div>
 
-          <div className="rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
+          <div className="rounded-md  bg-white border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
             <div className="text-center">
               <h2 className="text-lg font-medium text-gray-900">
                 Monthly
@@ -193,84 +159,42 @@ function billing() {
               </p>
             </div>
 
-            <ul className="mt-6 space-y-2">
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+            <ul className="mt-6 p-4 mb-10 space-y-4">
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> 100,000 Words/Month </span>
               </li>
 
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> 50+ Content Templates </span>
               </li>
 
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> Unlimited Download & Copy </span>
               </li>
 
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 text-indigo-700"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle className="h-5 w-5 text-indigo-700" />
                 <span className="text-gray-700"> 3 Months of History </span>
               </li>
             </ul>
             <div className="mt-8">
-          <Button
-            type="button"
-            className="w-full"
-            onClick={() => CreateSubscription()}
-          >
-            {loading ? (
-              <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />
-            ) : (
-              'Subscribe Now'
-            )}
-          </Button>
-        </div>
+              <Button
+                type="button"
+                className="w-full"
+                onClick={() => CreateSubscription()}
+              >
+                {loading ? (
+                  <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  'Subscribe Now'
+                )}
+              </Button>
+            </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   );
