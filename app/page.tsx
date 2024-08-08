@@ -139,7 +139,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-2">
           <a
             className="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7 dark:hover:bg-neutral-800"
-            href="#"
+            href="/dashboard"
           >
             <div className="flex justify-center items-center size-12 bg-blue-600 rounded-xl">
               <svg
@@ -188,7 +188,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7 dark:hover:bg-neutral-800"
-            href="#"
+            href="/dashboard"
           >
             <div className="flex justify-center items-center size-12 bg-blue-600 rounded-xl">
               <svg
@@ -238,7 +238,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7 dark:hover:bg-neutral-800"
-            href="#"
+            href="/dashboard"
           >
             <div className="flex justify-center items-center size-12 bg-blue-600 rounded-xl">
               <svg
@@ -286,7 +286,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7 dark:hover:bg-neutral-800"
-            href="#"
+            href="/dashboard/contact"
           >
             <div className="flex justify-center items-center size-12 bg-blue-600 rounded-xl">
               <svg
