@@ -9,6 +9,8 @@ import Image from 'next/image'
 import React from 'react'
 import { TEMPLATE } from '../_components/TemplateListSection'
 import CopyButton from './_components/CopyButton'
+// import useMetaPixel from '@/lib/useMetaPixel'
+
 
 export interface HISTORY{
     id:Number,
@@ -19,6 +21,7 @@ export interface HISTORY{
     createdAt:string
 }
 async function History() {
+    // useMetaPixel('1704090783704429');
     
     const user=await currentUser();
 

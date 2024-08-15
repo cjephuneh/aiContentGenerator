@@ -9,8 +9,11 @@ import { useUser } from '@clerk/nextjs';
 import moment from 'moment';
 import { UserSubscriptionContext } from '@/app/(context)/UserSubscriptionContext';
 import { FaRegCheckCircle } from "react-icons/fa";
+import useMetaPixel from '@/lib/useMetaPixel'
+
 
 function billing() {
+  useMetaPixel('1704090783704429');
   const [loading, setLoading] = useState(false);
   const [currency, setCurrency] = useState('KES'); // Default currency
   const { user } = useUser();

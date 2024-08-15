@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { sendEmail } from "@/lib/email";
 // import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import useMetaPixel from '@/lib/useMetaPixel'
+
 
 export type FormData = {
   firstName: string;
@@ -13,6 +15,8 @@ export type FormData = {
 };
 
 export default function Contact() {
+  useMetaPixel('1704090783704429');
+
   const { register, handleSubmit, reset } = useForm<FormData>();
   // const { toast } = useToast();
   const [isLoading, setIsLoading] = useState<boolean>(false);

@@ -3,9 +3,12 @@ import Image from "next/image";
 import Header from "./dashboard/_components/Header";
 import Link from "next/link";
 import Head from 'next/head';
+// import useMetaPixel from '@/lib/useMetaPixel'
+
 
 
 export default function Home() {
+  // useMetaPixel('1704090783704429');
   return (
     <div>
       <Head>
@@ -93,11 +96,7 @@ export default function Home() {
 
           <div className="mt-5 max-w-2xl text-center mx-auto">
             <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-              AI Content
-              <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">
-                {" "}
-                Generator
-              </span>
+            Revolutionize Your Content Creation.
             </h1>
           </div>
 

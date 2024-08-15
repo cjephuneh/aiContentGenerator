@@ -4,6 +4,9 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Head from 'next/head'; // Import the Head component
 import Script from 'next/script'; // Import the Script component
+// import useMetaPixel from '@/lib/useMetaPixel'
+
+
 
 const inter = Outfit({ subsets: ["latin"] });
 
