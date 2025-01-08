@@ -19,7 +19,7 @@ export default function Home() {
         <meta property="og:title" content="AI Content Generator - Revolutionize Your Content Creation" />
         <meta property="og:description" content="Revolutionize your content creation with our AI-powered app, delivering engaging and high-quality text in seconds." />
         <meta property="og:image" content="/path/to/your/image.jpg" />
-        <meta property="og:url" content="https://nichenod.com/" />
+        <meta property="og:url" content="https://AIScriptly.com/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Content Generator - Revolutionize Your Content Creation" />
         <meta name="twitter:description" content="Revolutionize your content creation with our AI-powered app, delivering engaging and high-quality text in seconds." />
@@ -36,7 +36,7 @@ export default function Home() {
               {/* <button type="button" className="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation"> */}
               {/* <Image src={'/logo.svg'} alt="logo" width={150} height={150} /> */}
               <h1 className="text-xl font-semibold dark:text-white">
-                NichNode😉
+                AIscriptly😉
               </h1>
               {/* </button> */}
             </div>
